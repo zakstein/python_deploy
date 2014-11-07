@@ -2,7 +2,8 @@ from ubuntu
 
 maintainer zakstein@gmail.com
 
-run echo "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe" > /etc/apt/sources.list
+env DEBIAN_FRONTEND noninteractive
+
 run apt-get update
 run apt-get install -y build-essential git
 run apt-get install -y python python-dev python-setuptools
@@ -11,8 +12,7 @@ run easy_install pip
 
 run pip install uwsgi
 
-run apt-get install -y python-software-properties
-run apt-get update
+run apt-get install -y python-software-properties software-properties-common
 run add-apt-repository -y ppa:nginx/stable
 
 add . /home/docker/code/
