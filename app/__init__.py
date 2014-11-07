@@ -5,3 +5,6 @@ app = Flask(__name__)
 def hello():
 	return "HELLOWURLD"
 
+
+if __name__ == "__main__":
+	app.run()

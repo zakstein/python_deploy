@@ -17,7 +17,7 @@ run add-apt-repository -y ppa:nginx/stable
 
 add . /home/docker/code/
 
-run echo "daemon off'" >> /etc/nginx/nginx.conf
+run echo "daemon off;" >> /etc/nginx/nginx.conf
 
 run rm /etc/nginx/sites-enabled/default
 run ln -s /home/docker/code/conf/nginx-app.conf /etc/nginx/sites-enabled/
@@ -26,3 +26,6 @@ run ln -s /home/docker/code/conf/supervisor-app.conf /etc/supervisor/conf.d/
 run pip install -r /home/docker/code/app/requirements.txt
 
 expose 80
+
+cmd ["supervisord", "-n"]
+
