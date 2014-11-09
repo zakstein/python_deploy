@@ -6,5 +6,5 @@
 			"ContainerDirectory": "/var/app"
 		}
 	],
-		"Logging": "/var/log"
+		"Logging": "/var/log/nginx"
 }

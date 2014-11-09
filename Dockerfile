@@ -1,4 +1,4 @@
-from ubuntu
+from ubuntu:14.04
 
 maintainer zakstein@gmail.com
 
