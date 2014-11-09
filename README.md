@@ -14,5 +14,10 @@ The release zips don't work with AWS. To make them work, unzip and then run
 
 	zip ../myapp.zip -r * .[^.]*
 
+or
+
+	git archive --format=zip HEAD > <archive_name>
+
 in the folder
+
 
